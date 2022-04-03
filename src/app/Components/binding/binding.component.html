@@ -1,0 +1,15 @@
+<p (click)="updatePhone()" title="{{phone}}">Phone is: {{phone}}</p>
+<p [class]='user.name' [title]="user.surname">Full name is: {{user.name + '' + user.surname}}</p>
+<p>Full name is: {{fullName}}</p>
+<p [innerHTML]="boldText"></p>
+<input (input)="onInput($event)" [value]="phone" type="text">
+<br>
+<input (ngModelChange)="user.name=$event" [ngModel]="user.name" type="text">
+<br>
+<input [(ngModel)]="user.surname" type="text">
+<hr>
+  <form (ngSubmit)="onSubmit()" action="#">
+    <input [(ngModel)]="login" name="login" type="text">
+    <input [(ngModel)]="password" name="password" type="password">
+    <button type="submit">Submit</button>
+  </form>
