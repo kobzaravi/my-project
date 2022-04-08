@@ -3,7 +3,7 @@
   "compileOnSave": false,
   "compilerOptions": {
     "baseUrl": "./",
-    "outDir": "./dist/out-tsc",
+    "outDir": "output_js",
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "noImplicitOverride": true,
@@ -20,9 +20,17 @@
     "module": "es2020",
     "lib": [
       "es2020",
-      "dom"
+      "dom",
+      "es6"
+    ],
+    "types": [
+      "jasmine",
+      "node"
     ]
   },
+  "exclude": [
+    "node_modules/*"
+  ],
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,
